@@ -1,76 +1,82 @@
-# Null-class-task5
->>>>>>> ee77a237ae4abbc39b89fcd8797f8ff0f2a16a39
-=======
-# Getting Started with Create React App
+# Custom Indicators & Strategies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application for generating random price data and applying customizable technical indicators and trading strategies. Visualize buy/sell signals on interactive charts to engage deeply with financial data analysis.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Random Price Data Generation**: Generate synthetic stock price data with adjustable parameters (number of points, volatility).
+- **Built-in Indicators**:
+  - Simple Moving Average (SMA)
+  - Exponential Moving Average (EMA)
+  - Bollinger Bands
+- **Custom Indicators**: Create your own indicators using mathematical expressions (e.g., `sma(close, 50)`, `ema(close, 21)`).
+- **Trading Strategies**: Define rule-based strategies with buy/sell signals, such as "close crosses above sma(close, 50)".
+- **Interactive Chart**: Visualize price data, indicators, and trading signals with color-coded overlays.
+- **Responsive UI**: Clean, colorful interface that works on desktop and mobile devices.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Frontend framework for building the user interface.
+- **JavaScript**: Core language for logic and calculations.
+- **HTML/CSS**: Markup and styling for the application.
+- **Create React App**: Build tool and development server.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Ensure you have Node.js (version 14 or higher) and npm installed on your system.
+2. Clone or download the project repository.
+3. Navigate to the project directory: `cd myapp`
+4. Install dependencies: `npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Start the development server: `npm start`
+2. Open your browser and navigate to `http://localhost:3000`
+3. Adjust data parameters (points, volatility) and regenerate price data.
+4. Add built-in indicators (SMA, EMA, Bollinger Bands) or create custom ones using the formula input.
+5. Define trading strategies by specifying left expression, operator, and right expression.
+6. View the chart with overlays and signals. Use the legend to identify different indicators.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Example Strategies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Buy when close crosses above SMA(50): Left: `close`, Operator: `crosses_above`, Right: `sma(close, 50)`
+- Sell when close crosses below EMA(20): Left: `close`, Operator: `crosses_below`, Right: `ema(close, 20)`
+- Buy when close > Bollinger Upper: Left: `close`, Operator: `>`, Right: `boll_upper(close, 20, 2)`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+```
+myapp/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Chart.js      # Chart component for visualization
+│   │   └── Controls.js   # UI controls (not used in current implementation)
+│   ├── lib/
+│   │   ├── indicators.js # Indicator calculation functions
+│   │   ├── expr.js       # Expression compiler for custom formulas
+│   │   └── strategy.js   # Strategy evaluation logic
+│   ├── App.js            # Main application component
+│   ├── App.css           # Application styles
+│   └── ...
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Task Completion Status
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The core task of allowing users to add customizable indicators and strategies has been **completed**. Users can:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- ✅ Add built-in indicators (SMA, EMA, Bollinger Bands)
+- ✅ Create custom indicators using expressions
+- ✅ Define trading strategies with various operators
+- ✅ Visualize signals on the chart
+- ✅ Engage deeply with data through interactive features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to fork the repository and submit pull requests for improvements or new features.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Null-class-task5
->>>>>>> ee77a237ae4abbc39b89fcd8797f8ff0f2a16a39
